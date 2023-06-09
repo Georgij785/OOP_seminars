@@ -1,22 +1,23 @@
 package Lesson_2.Home_work.Task_1;
 
 public interface I_GoforAWalk {
-    boolean YouHaveFriendsToWalk=true;
-    default void GoForAWalk(){
-        if (YouHaveFriendsToWalk){
-            CallFriendToWalk();
+
+    default void GoForAWalk() {
+        if (CallFriendToWalk()) {
             GoOut();
             MeetFriend();
             Walk();
             GoHome();
-        }
-        else {
+        } else {
             GoOut();
             Walk();
             GoHome();
         }
     }
-    void CallFriendToWalk();
+
+
+    boolean CallFriendToWalk();
+
     void GoOut();
 
     void MeetFriend();

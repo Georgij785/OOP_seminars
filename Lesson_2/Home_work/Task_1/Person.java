@@ -1,6 +1,6 @@
 package Lesson_2.Home_work.Task_1;
 
-public class Person {
+public class Person implements I_GoforAWalk{
 
     private String name;
 
@@ -8,7 +8,9 @@ public class Person {
 
     private String LastName;
 
-
+    Person friend;
+    String place="home";
+    boolean free=true;
 
     Person(String name, int age, String LastName){
         this.name=name;
@@ -37,5 +39,51 @@ public class Person {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public boolean CallFriendToWalk() {
+        System.out.println("-Привет, "+friend.getName()+ "Давай погуляем.");
+        if (friend.free){
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public void GoOut() {
+
+        System.out.println("Я выхожу на улицу");
+        place="outside";
+    }
+
+    @Override
+    public void MeetFriend() {
+        friend.place="outside";
+        System.out.println("-Привет,"+friend.getName()+"Пошли.");
+        System.out.println("-Привет,"+this.getName()+"Да,Пошли.");
+        for (int i = 0; i < 5; i++) {
+            System.out.println("...\n");
+        }
+
+    }
+
+    @Override
+    public void Walk() {
+        for (int i = 0; i < 5; i++) {
+            System.out.println("...\n");
+        }
+        System.out.println("-Хорошо гуляем\n-Да");
+
+        for (int i = 0; i < 5; i++) {
+            System.out.println("...\n");
+        }
+
+    }
+
+    @Override
+    public void GoHome() {
+        System.out.println("-Слушай, мне пора, до встречи, дружище!\n-Пока.");
+
     }
 }
