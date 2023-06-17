@@ -10,6 +10,10 @@ public class main {
 
         ArrayList<String> ar_S = new ArrayList<>(Arrays.asList("text", "kjdf", "jkhsdohd"));
         Array<String> a_2 = new Array<String>(ar_S);
+
+
+        a_1.printArray();
+        a_2.printArray();
     }
 
 }
