@@ -1,5 +1,5 @@
-package Lesson_4.Class_work.Task_3;
-
+package Lesson_6.HomeTask.Task_2;
+// доп комментарий по SOLID только в файле A
 public class main {
     public static void main(String[] args) {
         A a = new A();
