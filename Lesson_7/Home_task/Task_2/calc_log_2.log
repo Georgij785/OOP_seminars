@@ -1,0 +1,4 @@
+INFO:log_2:1 - 2 = -1
+INFO:log_2:4 + 4 = 8
+INFO:log_2:12 / 4 = 3.0
+INFO:log_2:34 * 12 = 408
